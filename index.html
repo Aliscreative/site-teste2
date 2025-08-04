@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Clínica Estética Médica | Saúde, Beleza e Bem-Estar em São Paulo</title>
+  <meta name="description" content="Descubra protocolos médicos de estética avançada em nossa clínica em São Paulo. Oferecemos harmonização facial, bioestimuladores, Ultraformer e mais. Agende sua consulta.">
+  <meta name="keywords" content="clínica estética, harmonização facial, ultraformer, peeling químico, toxina botulínica, são paulo">
+
+  <meta property="og:title" content="Clínica Estética Médica | Sua Melhor Versão" />
+  <meta property="og:description" content="Protocolos médicos de estética avançada, com foco em saúde, beleza e bem-estar." />
+  <meta property="og:image" content="https://example.com/sua-imagem-social.jpg" /> <meta property="og:url" content="https://www.seusite.com.br" /> <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Clínica Estética Médica | Sua Melhor Versão" />
+  <meta name="twitter:description" content="Protocolos médicos de estética avançada, com foco em saúde, beleza e bem-estar." />
+  <meta name="twitter:image" content="https://example.com/sua-imagem-social.jpg" /> <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Clínica Estética Médica",
+    "image": "https://example.com/sua-imagem-social.jpg",
+    "@id": "https://www.seusite.com.br",
+    "url": "https://www.seusite.com.br",
+    "telephone": "+5511999990000",
+    "description": "Clínica de estética médica avançada com foco em saúde, beleza e bem-estar. Oferecemos harmonização facial, bioestimuladores, Ultraformer e mais.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Avenida Paulista, 1234",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "01310-100",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "14:00"
+      }
+    ]
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cor-fundo: #FAF5E4;
+      --cor-principal: #A28D6D;
+      --cor-destaque: #B98B5E;
+      --cor-destaque-hover: #a97e54;
+      --cor-texto: #4B4539;
+      --cor-branco: #FFFFFF;
+      --cor-header-bg: rgba(250, 245, 228, 0.95);
+      --cor-shadow: rgba(75, 69, 57, 0.12);
+      --cor-destaque-shadow: rgba(185, 139, 94, 0.4);
+      --cor-destaque-shadow-hover: rgba(169, 126, 84, 0.6);
+      --cor-whatsapp-bg: #25d366;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--cor-fundo); color: var(--cor-texto); line-height: 1.6; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    body.nav-open { overflow: hidden; }
+
+    /* HEADER COM NAVEGAÇÃO */
+    header { position: sticky; top: 0; z-index: 10000; background: var(--cor-header-bg); display: flex; justify-content: space-between; align-items: center; padding: 1rem 3rem; box-shadow: 0 2px 10px var(--cor-shadow); backdrop-filter: blur(8px); }
+    .logo { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.8rem; color: var(--cor-principal); }
+    header nav { display: flex; gap: 1.5rem; }
+    header nav a { text-decoration: none; color: var(--cor-texto); font-weight: 600; transition: color 0.3s ease; position: relative; padding: 0.25rem 0; }
+    header nav a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: var(--cor-destaque); transition: width 0.4s ease; }
+    header nav a:hover, header nav a:focus-visible { color: var(--cor-principal); outline: none; }
+    header nav a:hover::after, header nav a:focus-visible::after { width: 100%; }
+
+    /* BOTÃO MENU HAMBÚRGUER */
+    .menu-toggle { display: none; /* Escondido no desktop */ width: 30px; height: 24px; background: transparent; border: none; cursor: pointer; display: flex; flex-direction: column; justify-content: space-between; z-index: 11000; }
+    .menu-toggle .bar { display: block; width: 100%; height: 3px; background-color: var(--cor-principal); border-radius: 2px; transition: transform 0.3s ease, opacity 0.3s ease; }
+    header.nav-open .menu-toggle .bar:nth-child(1) { transform: translateY(10.5px) rotate(45deg); }
+    header.nav-open .menu-toggle .bar:nth-child(2) { opacity: 0; }
+    header.nav-open .menu-toggle .bar:nth-child(3) { transform: translateY(-10.5px) rotate(-45deg); }
+
+    /* HERO */
+    .hero { background: linear-gradient(rgba(162, 141, 109, 0.55), rgba(162, 141, 109, 0.55)), url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2rem 1.5rem; text-align: center; color: var(--cor-branco); user-select: none; animation: fadeInMoveUp 1.5s ease forwards; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.8rem); margin-bottom: 1rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.4); opacity: 0; animation: fadeInMoveUp 1.5s 0.2s ease forwards; }
+    .hero p { max-width: 700px; font-size: clamp(1rem, 2vw, 1.5rem); margin-bottom: 2.5rem; line-height: 1.6; text-shadow: 1px 1px 8px rgba(0,0,0,0.35); opacity: 0; animation: fadeInMoveUp 1.5s 0.4s ease forwards; }
+    .cta-btn { background-color: var(--cor-destaque); color: var(--cor-branco); font-weight: 700; padding: 0.85rem 2rem; border-radius: 10px; border: none; cursor: pointer; transition: background-color 0.4s ease, box-shadow 0.4s ease; font-size: 1.1rem; text-decoration: none; display: inline-block; box-shadow: 0 5px 15px var(--cor-destaque-shadow); opacity: 0; animation: fadeInMoveUp 1.5s 0.6s ease forwards; }
+    .cta-btn:hover { background-color: var(--cor-destaque-hover); box-shadow: 0 8px 20px var(--cor-destaque-shadow-hover); }
+    .cta-btn:focus-visible { outline: 3px solid var(--cor-principal); outline-offset: 4px; background-color: var(--cor-destaque-hover); }
+
+    /* SEÇÕES E CARDS */
+    .section { padding: 5rem 3rem; max-width: 1100px; margin: 0 auto 4rem auto; background: var(--cor-branco); border-radius: 20px; box-shadow: 0 10px 25px rgba(162, 141, 109, 0.15); opacity: 0; transform: translateY(50px); animation-fill-mode: forwards; }
+    .section.show { animation: fadeInMoveUp 1.2s ease forwards; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 1rem; color: var(--cor-principal); position: relative; user-select: none; padding-bottom: 15px; }
+    .section-title::after { content: ''; width: 80px; height: 5px; background: var(--cor-destaque); position: absolute; bottom: 0; left: 0; border-radius: 4px; box-shadow: 0 2px 8px var(--cor-destaque-shadow); }
+    .section > p { font-size: 1.1rem; color: var(--cor-texto); max-width: 900px; margin: 0 auto; user-select: text; line-height: 1.7; text-align: left; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.8rem; margin-top: 3rem; }
+    .card { background: var(--cor-fundo); padding: 2rem; border-radius: 16px; box-shadow: 0 12px 30px rgba(162, 141, 109, 0.12); transition: transform 0.5s ease, box-shadow 0.5s ease; text-align: center; user-select: none; display: flex; flex-direction: column; align-items: center; gap: 1.2rem; cursor: default; opacity: 0; transform: translateY(30px); animation-fill-mode: forwards; }
+    .card.show { animation: fadeInBounce 0.8s ease forwards; }
+    .card:hover, .card:focus-within { transform: translateY(-10px); box-shadow: 0 20px 45px rgba(210, 176, 140, 0.35); }
+    .card:focus-within { outline: 3px solid var(--cor-principal); outline-offset: 6px; }
+    .card h3 { font-family: 'Playfair Display', serif; color: var(--cor-principal); font-size: 1.4rem; margin-top: 0.5rem; }
+    .card p { font-size: 0.95rem; line-height: 1.5; }
+    .card blockquote p { font-style: italic; font-size: 1.1rem; border-left: 3px solid var(--cor-destaque); padding-left: 1rem; text-align: left; }
+    .card figcaption { font-weight: 600; color: var(--cor-principal); margin-top: 1rem; }
+    .img-box { width: 120px; height: 120px; border-radius: 50%; background: var(--cor-branco); display: flex; align-items: center; justify-content: center; overflow: hidden; box-shadow: 0 6px 18px var(--cor-destaque-shadow); user-select: none; flex-shrink: 0; }
+    .img-box svg { width: 60px; height: 60px; fill: var(--cor-principal); }
+    .section-cta { margin-top: 3.5rem; text-align: center; }
+
+    /* RODAPÉ E CONTATO */
+    footer { background: var(--cor-principal); color: var(--cor-branco); padding: 2.5rem 1rem; text-align: center; font-size: 0.9rem; letter-spacing: 0.05em; box-shadow: 0 -5px 15px rgba(75, 69, 57, 0.1); }
+    footer a { color: var(--cor-destaque); text-decoration: none; font-weight: 600; transition: color 0.3s ease; }
+    footer a:hover, footer a:focus-visible { color: var(--cor-fundo); outline: none; text-decoration: underline; }
+    
+    /* BOTÃO WHATSAPP FLUTUANTE */
+    #whatsapp-float { position: fixed; bottom: 25px; right: 25px; background: var(--cor-whatsapp-bg); width: 60px; height: 60px; border-radius: 50%; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5); display: flex; justify-content: center; align-items: center; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; z-index: 9999; }
+    #whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 12px 28px rgba(37, 211, 102, 0.7); }
+    #whatsapp-float:focus-visible { outline: 3px solid #1f8c4d; outline-offset: 4px; }
+    #whatsapp-float svg { width: 32px; height: 32px; fill: white; }
+    
+    #map-container { margin-top: 3rem; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 30px rgba(162, 141, 109, 0.15); border: 1px solid #eee; }
+    #map { width: 100%; height: 400px; border: none; display: block; }
+    .contact-info a { color: var(--cor-destaque); font-weight: 600; text-decoration: none; }
+    .contact-info a:hover { text-decoration: underline; }
+
+    /* RESPONSIVIDADE E MENU MÓVEL */
+    @media (max-width: 768px) {
+      header { padding: 1rem 1.5rem; }
+      .menu-toggle { display: flex; }
+      header nav { position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: var(--cor-fundo); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1); }
+      header.nav-open nav { transform: translateX(0); }
+      header nav a { font-size: 1.5rem; }
+      .section { padding: 4rem 1.5rem; }
+      .section-title { text-align: center; }
+      .section-title::after { left: 50%; transform: translateX(-50%); }
+      .section > p { text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .section-title { font-size: 1.8rem; }
+      .card-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .card { padding: 1.5rem; }
+    }
+
+    /* ANIMAÇÕES */
+    @keyframes fadeInMoveUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeInBounce { 0% { opacity: 0; transform: translateY(40px); } 60% { opacity: 1; transform: translateY(-15px); } 80% { transform: translateY(5px); } 100% { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Clínica Médica</div>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu" aria-controls="main-nav" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <nav id="main-nav" aria-label="Navegação principal">
+      <a href="#servicos">Serviços</a>
+      <a href="#tecnologia">Tecnologia</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" role="banner" aria-labelledby="hero-title">
+      <h1 id="hero-title">Da Consulta à Sua Melhor Versão</h1>
+      <p>Protocolos médicos de estética avançada, com foco em saúde, beleza e bem-estar em um só lugar.</p>
+      <a class="cta-btn" href="https://wa.me/5511999990000" target="_blank" rel="noopener noreferrer">Agendar Consulta</a>
+    </section>
+
+    <section class="section" id="servicos" aria-labelledby="servicos-title">
+      <h2 id="servicos-title" class="section-title">Nossos Serviços</h2>
+      <p>Oferecemos uma variedade de procedimentos personalizados para rejuvenescimento, prevenção e harmonização facial, sempre com acompanhamento médico.</p>
+      <div class="card-grid">
+        <article class="card" style="animation-delay: 0.1s;">
+          <div class="img-box" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" stroke="var(--cor-principal)" stroke-width="4" fill="none"/><path d="M20 40c0-4 8-4 8 0" stroke="var(--cor-principal)" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="22" cy="26" r="4" fill="var(--cor-principal)"/><circle cx="42" cy="26" r="4" fill="var(--cor-principal)"/></svg></div>
+          <h3>Harmonização Facial</h3>
+        </article>
+        <article class="card" style="animation-delay: 0.3s;">
+          <div class="img-box" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" stroke="var(--cor-principal)" stroke-width="3" fill="none"/><circle cx="20" cy="20" r="6" fill="var(--cor-principal)"/><circle cx="44" cy="44" r="6" fill="var(--cor-principal)"/><line x1="24" y1="24" x2="40" y2="40" stroke="var(--cor-principal)" stroke-width="3"/></svg></div>
+          <h3>Bioestimuladores de Colágeno</h3>
+        </article>
+        <article class="card" style="animation-delay: 0.5s;">
+          <div class="img-box" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect x="24" y="12" width="16" height="40" rx="8" ry="8" stroke="var(--cor-principal)" stroke-width="3" fill="none"/><line x1="20" y1="20" x2="44" y2="20" stroke="var(--cor-principal)" stroke-width="2"/></svg></div>
+          <h3>Toxina Botulínica</h3>
+        </article>
+        <article class="card" style="animation-delay: 0.7s;">
+          <div class="img-box" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M32 4c-8 12-12 20-12 28a12 12 0 0 0 24 0c0-8-4-16-12-28z" stroke="var(--cor-principal)" stroke-width="3" fill="none"/></svg></div>
+          <h3>Peeling Químico</h3>
+        </article>
+      </div>
+      <div class="section-cta"><a class="cta-btn" href="https://wa.me/5511999990000" target="_blank" rel="noopener noreferrer">Ver Tratamentos</a></div>
+    </section>
+
+    <section class="section" id="tecnologia" aria-labelledby="tecnologia-title">
+      <h2 id="tecnologia-title" class="section-title">Tecnologia de Ponta</h2>
+      <p>Trabalhamos com equipamentos modernos e aprovados pelos principais órgãos reguladores, garantindo segurança e resultados eficazes.</p>
+      <div class="card-grid">
+        <article class="card" style="animation-delay: 0.1s;"><div class="img-box" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect x="20" y="12" width="24" height="40" rx="6" ry="6" stroke="var(--cor-principal)" stroke-width="3" fill="none"/><circle cx="32" cy="32" r="8" stroke="var(--cor-principal)" stroke-width="3" fill="none"/></svg></div><h3>Ultraformer</h3></article>
+        <article class="card" style="animation-delay: 0.3s;"><div class="img-box" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><line x1="20" y1="44" x2="44" y2="20" stroke="var(--cor-principal)" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="32" r="12" stroke="var(--cor-principal)" stroke-width="3" fill="none"/></svg></div><h3>Fotona 4D</h3></article>
+        <article class="card" style="animation-delay: 0.5s;"><div class="img-box" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="14" stroke="var(--cor-principal)" stroke-width="3" fill="none"/><line x1="32" y1="10" x2="32" y2="54" stroke="var(--cor-principal)" stroke-width="2"/><line x1="10" y1="32" x2="54" y2="32" stroke="var(--cor-principal)" stroke-width="2"/></svg></div><h3>Luz Pulsada</h3></article>
+        <article class="card" style="animation-delay: 0.7s;"><div class="img-box" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M32 12v40m12-12H20" stroke="var(--cor-principal)" stroke-width="4" stroke-linecap="round"/></svg></div><h3>Criofrequência</h3></article>
+      </div>
+      <div class="section-cta"><a class="cta-btn" href="https://wa.me/5511999990000" target="_blank" rel="noopener noreferrer">Falar com Especialista</a></div>
+    </section>
+
+    <section class="section" id="depoimentos" aria-labelledby="depoimentos-title">
+      <h2 id="depoimentos-title" class="section-title">Depoimentos</h2>
+      <p>Veja o que nossos pacientes dizem sobre a transformação que viveram conosco.</p>
+      <div class="card-grid">
+        <figure class="card" style="animation-delay: 0.2s;"><blockquote><p>“Minha autoestima voltou graças ao tratamento. A equipe é incrivelmente atenciosa e os resultados superaram minhas expectativas.”</p></blockquote><figcaption>– Ana P.</figcaption></figure>
+        <figure class="card" style="animation-delay: 0.4s;"><blockquote><p>“Ambiente acolhedor e tecnologia incrível. Me senti segura do início ao fim do procedimento. Recomendo de olhos fechados!”</p></blockquote><figcaption>– Renata G.</figcaption></figure>
+      </div>
+      <div class="section-cta"><a class="cta-btn" href="https://wa.me/5511999990000" target="_blank" rel="noopener noreferrer">Agendar Minha Avaliação</a></div>
+    </section>
+
+    <section class="section" id="contato" aria-labelledby="contato-title">
+      <h2 id="contato-title" class="section-title">Fale Conosco</h2>
+      <p class="contact-info">Estamos prontos para atender você.<br />WhatsApp: <a href="https://wa.me/5511999990000" target="_blank" rel="noopener noreferrer">(11) 99999-0000</a><br />Email: <a href="mailto:contato@clinica.com">contato@clinica.com</a></p>
+      <div id="map-container" aria-label="Mapa de localização da clínica" role="region">
+         <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.145833473505!2d-46.65889138493636!3d-23.56321226754331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1662156828881!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de localização da clínica na Avenida Paulista"></iframe>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>© 2025 Clínica Médica Estética. Todos os direitos reservados.</p>
+    <p>Responsável Técnico: Dr. Nome Sobrenome - CRM/SP 123456</p> </footer>
+
+  <a href="https://wa.me/5511999990000" target="_blank" rel="noopener noreferrer" id="whatsapp-float" aria-label="Abrir conversa no WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.8 0-67.6-9.5-97.2-26.7l-7-4.1-72.5 19.1L48.9 356.3l-4.4-7.3c-18.5-30.4-28.2-65.3-28.2-101.5 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+  </a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // LÓGICA DO MENU MÓVEL
+      const header = document.querySelector('header');
+      const menuToggle = document.getElementById('menu-toggle');
+      const mainNav = document.getElementById('main-nav');
+      const navLinks = mainNav.querySelectorAll('a');
+
+      if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+          header.classList.toggle('nav-open');
+          document.body.classList.toggle('nav-open');
+          const isNavOpen = header.classList.contains('nav-open');
+          menuToggle.setAttribute('aria-expanded', isNavOpen);
+          menuToggle.setAttribute('aria-label', isNavOpen ? 'Fechar menu' : 'Abrir menu');
+        });
+      }
+      
+      // Fecha o menu ao clicar em um link
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (header.classList.contains('nav-open')) {
+            header.classList.remove('nav-open');
+            document.body.classList.remove('nav-open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+            menuToggle.setAttribute('aria-label', 'Abrir menu');
+          }
+        });
+      });
+
+      // LÓGICA DO INTERSECTION OBSERVER PARA ANIMAÇÕES
+      const observerCallback = (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+          }
+        });
+      };
+      const observer = new IntersectionObserver(observerCallback, { threshold: 0.15 });
+      document.querySelectorAll('.section, .card').forEach(el => {
+        if(el) {
+          observer.observe(el);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
