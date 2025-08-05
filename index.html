@@ -9723,23 +9723,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     
 <style type="text/css" rel="stylesheet">
   
-    #rd-text-ma2jpc9f {
-      display: block;
-      border-bottom-style: none;
-      border-color: #000000;
-      border-left-style: none;
-      border-radius: 0px;
-      border-right-style: none;
-      border-top-style: none;
-      border-width: 1px;
-      min-height: auto0px;
-      max-width: 448px;
-      margin-top: 80px;
-      margin-bottom: 0px;
-      align-self: center;
-      width: 100%;
-      word-break: break-word;
-    }
+   #rd-text-ma2jpc9f {
+  display: block;
+  border-style: none;
+  border-width: 1px;
+  border-radius: 0px;
+  min-height: auto;
+  max-width: 900px;      /* largura máxima para telas grandes */
+  margin: 80px auto 0 auto;  /* centraliza horizontalmente */
+  width: 100%;
+  word-break: keep-all;      /* evita quebra dentro das palavras */
+  overflow-wrap: normal;
+  white-space: normal;
+  hyphens: none;
+  padding: 0 10px;          /* espaço lateral para não encostar nas bordas */
+  box-sizing: border-box;   /* garante que padding não estoure a largura */
+  text-align: center;
+}
+
+/* Responsividade para telas médias e pequenas */
+@media screen and (max-width: 768px) {
+  #rd-text-ma2jpc9f {
+    max-width: 90vw;      /* ocupa até 90% da largura da viewport */
+    margin-top: 50px;     /* ajusta o espaçamento superior */
+    padding: 0 15px;
+  }
+}
+
+/* Para telas muito pequenas (celulares) */
+@media screen and (max-width: 480px) {
+  #rd-text-ma2jpc9f {
+    max-width: 95vw;      /* ocupa quase toda a largura da tela */
+    margin-top: 30px;
+    padding: 0 10px;
+    font-size: 28px;      /* reduz o tamanho da fonte para melhor legibilidade */
+    line-height: 1.2;
+  }
+
+  #rd-text-ma2jpc9f p span {
+    font-size: 28px !important; /* força a redução da fonte no texto */
+  }
+}
+
   
 
   
